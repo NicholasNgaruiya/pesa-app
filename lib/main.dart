@@ -70,7 +70,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.all(10),
                       child: Text(
-                        tx.amount.toString(),
+                        '\$${tx.amount}',
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -88,8 +88,10 @@ class MyHomePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(tx.date.toString(),
-                            style: const TextStyle(color: Colors.brown)),
+                        Text(
+                          tx.date.toString(),
+                          style: const TextStyle(color: Colors.brown),
+                        ),
                       ],
                     )
                   ],
