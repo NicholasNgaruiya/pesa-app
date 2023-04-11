@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       home: MyHomePage(),
     );
@@ -25,20 +25,22 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Pesa App'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              width: double.infinity,
-              child: Card(
-                color: Colors.green,
-                elevation: 5,
-                child: Text('CHART!'),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: const [
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  color: Colors.green,
+                  elevation: 5,
+                  child: Text('CHART!'),
+                ),
               ),
-            ),
-            UserTransaction()
-          ],
+              UserTransaction()
+            ],
+          ),
         ));
   }
 }
